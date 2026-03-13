@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ABOW Atlas
 
-## Getting Started
+### _From Ancient Boats to Overwhelmed Waters_
 
-First, run the development server:
+An interactive map platform connecting archaeological watercraft evidence with the present-day climate vulnerability of coastal and river-dependent communities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What is this?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ABOW Atlas is a personal research project built at the intersection of maritime archaeology, GIS, and climate change. It asks a simple question:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> _The same communities that built and used boats for thousands of years are now facing rising waters, intensifying floods, and disappearing shorelines. What can the archaeological record tell us about how people have always lived with and adapted to water?_
 
-## Learn More
+The platform layers two kinds of data on a single map:
 
-To learn more about Next.js, take a look at the following resources:
+- **Archaeological layer** — logboat finds, watercraft sites, and historical woodland distribution
+- **Climate layer** — sea level rise projections, flood risk zones, and vulnerable community areas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- Interactive map with toggleable data layers
+- Popup windows for each site with photos, dimensions, wood species, and excavation context
+- Community polygons showing present-day climate threats
+- Sea level rise overlay (+1m scenario)
+- Historic woodland distribution layer
+- Filterable by region, date, and wood species _(in development)_
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Background
+
+This project grew out of a background in maritime archaeology and a frustration that archaeological spatial data rarely reaches beyond academic publishing. The logboat — the simplest boat ever made, just a hollowed tree, turns out to be a powerful lens for understanding how communities have always depended on forests, rivers, and coastal waters.
+
+Those same communities are now among the most climate-vulnerable in the world.
+
+---
+
+## Contact
+
+Built by Lei Ding
+
+If you're a researcher with relevant datasets, or a community organisation working on coastal resilience, I'd love to hear from you.
+
+---
+
+_ABOW — Ancient Boats, Overwhelmed Waters_
