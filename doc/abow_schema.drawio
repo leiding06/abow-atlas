@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.3">
+  <diagram name="ABOW Atlas Schema" id="abow-schema">
+    <mxGraphModel dx="2580" dy="1294" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vessel_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;spacingTop=0;fontSize=13;fontStyle=1;rounded=1;" value="vessel" vertex="1">
+          <mxGeometry height="36" width="280" x="81" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vessel_body" parent="1" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;whiteSpace=no;" value=" &lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot;&gt; &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;id&lt;/b&gt;&lt;/td&gt;&lt;td&gt;uuid PK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;description&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;geometry&lt;/td&gt;&lt;td&gt;geom(point)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;location_certainty&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;location_notes&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;date_earliest&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;   &lt;tr&gt;&lt;td&gt;date_notes&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;length_m&lt;/td&gt;&lt;td&gt;numeric&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;width_m&lt;/td&gt;&lt;td&gt;numeric&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;depth_m&lt;/td&gt;&lt;td&gt;numeric&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;construction_type&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;preservation_state&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;current_location&lt;/td&gt;&lt;td&gt;text (museum etc)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;region_id&lt;/td&gt;&lt;td&gt;uuid FK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;updated_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;updated_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="504" width="280" x="81" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="arch_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;spacingTop=0;fontSize=13;fontStyle=1;rounded=1;" value="arch_site" vertex="1">
+          <mxGeometry height="36" width="280" x="620" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="arch_body" parent="1" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;whiteSpace=no;" value=" &lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot;&gt; &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;id&lt;/b&gt;&lt;/td&gt;&lt;td&gt;uuid PK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;description&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;geometry&lt;/td&gt;&lt;td&gt;POLYGON / POINT (PostGIS)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;site_type&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;date_notes&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;location_certainty&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;region_id&lt;/td&gt;&lt;td&gt;uuid FK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;updated_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;updated_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="310" width="280" x="620" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="community_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#e1d5e7;align=center;verticalAlign=middle;spacingTop=0;fontSize=13;fontStyle=1;rounded=1;" value="modern_community" vertex="1">
+          <mxGeometry height="36" width="280" x="620" y="527" as="geometry" />
+        </mxCell>
+        <mxCell id="community_body" parent="1" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;whiteSpace=no;" value=" &lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot;&gt; &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;id&lt;/b&gt;&lt;/td&gt;&lt;td&gt;uuid PK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;description&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;geometry&lt;/td&gt;&lt;td&gt;POLYGON (PostGIS)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;country&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;population&lt;/td&gt;&lt;td&gt;integer&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;climate_risk_type&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;sea_level_exposure&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;flood_risk&lt;/td&gt;&lt;td&gt;enum&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;data_year&lt;/td&gt;&lt;td&gt;integer&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;region_id&lt;/td&gt;&lt;td&gt;uuid FK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;source_id&lt;/td&gt;&lt;td&gt;uuid FK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;updated_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;updated_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="377" width="280" x="620" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="region_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;spacingTop=0;fontSize=13;fontStyle=1;rounded=1;" value="region" vertex="1">
+          <mxGeometry height="36" width="280" x="1020" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="region_body" parent="1" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;whiteSpace=no;" value=" &lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot;&gt; &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;id&lt;/b&gt;&lt;/td&gt;&lt;td&gt;uuid PK&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;name&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;geometry&lt;/td&gt;&lt;td&gt;POLYGON (PostGIS)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;country_code&lt;/td&gt;&lt;td&gt;text (ISO)&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;gadm_id&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;notes&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;created_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;created_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;updated_at&lt;/td&gt;&lt;td&gt;timestamp&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;updated_by&lt;/td&gt;&lt;td&gt;text&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="237" width="280" x="1020" y="363" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_title" parent="1" style="text;html=1;strokeColor=none;fillColor=#f5f5f5;align=center;verticalAlign=middle;spacingTop=0;fontSize=13;fontStyle=1;rounded=1;" value="Enums / Reference Values" vertex="1">
+          <mxGeometry height="36" width="680" x="900" y="971" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_body" parent="1" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;fontSize=11;whiteSpace=no;" value=" &lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot;&gt; &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;location_certainty&lt;/b&gt;&lt;/td&gt;&lt;td&gt;exact · approximate · centroid · disputed&lt;/td&gt;&lt;/tr&gt;  &lt;tr&gt;&lt;td&gt;&lt;b&gt;construction_type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;logboat · plank_built · bark · reed · composite · unknown&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;preservation_state&lt;/b&gt;&lt;/td&gt;&lt;td&gt;complete · fragmentary · partial · lost&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;site_type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;settlement · fish_trap · harbour · ritual · midden · unknown&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;&lt;b&gt;climate_risk_type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;sea_level · flooding · erosion · storm_surge · combined&lt;/td&gt;&lt;/tr&gt;  &lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="124" width="680" x="900" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="vessel_body" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="region_body">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="267" />
+              <mxPoint x="510" y="482" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="arch_body" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" target="region_body">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="community_body" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.6;entryDx=0;entryDy=0;" target="region_body">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;" value="Colour Key" vertex="1">
+          <mxGeometry height="30" width="160" x="80" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="k1" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Core spatial entity" vertex="1">
+          <mxGeometry height="28" width="180" x="80" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="k3" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Reference / lookup table" vertex="1">
+          <mxGeometry height="28" width="180" x="80" y="1065" as="geometry" />
+        </mxCell>
+        <mxCell id="k5" parent="1" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Climate / community layer" vertex="1">
+          <mxGeometry height="28" width="180" x="80" y="1135" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
