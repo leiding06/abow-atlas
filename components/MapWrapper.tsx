@@ -2,22 +2,17 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import type { LayerKey } from "./Map";
+import { BASEMAPS, LAYERS } from "./MapConfig";
+import type { BasemapKey, LayerKey } from "./MapConfig";
 
-// Critical: dynamic import with ssr:false to avoid Leaflet SSR crash
+// Only Map.tsx has Leaflet — safe to dynamic import
 const Map = dynamic(() => import("./Map"), { ssr: false });
 
-// Re-export LAYERS for use in the panel — fetched lazily
-const LAYER_META: Record<LayerKey, { label: string; color: string }> = {
-  floodExtent: { label: "Flood Extent (GloFAS)", color: "#4fc3f7" },
-  lecz: { label: "Low Elevation Coastal Zone", color: "#ef9a9a" },
-  surfaceWater: { label: "Surface Water (JRC)", color: "#80deea" },
-};
-
 export default function MapWrapper() {
-  const [activeLayers, setActiveLayers] = useState<LayerKey[]>(["surfaceWater"]);
+  const [basemap, setBasemap] = useState<BasemapKey>("light");
+  const [activeLayers, setActiveLayers] = useState<LayerKey[]>([]);
 
-  const toggle = (key: LayerKey) => {
+  const toggleLayer = (key: LayerKey) => {
     setActiveLayers((prev) =>
       prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key]
     );
@@ -25,30 +20,54 @@ export default function MapWrapper() {
 
   return (
     <div className="relative w-full h-full">
-      <Map activeLayers={activeLayers} />
+      <Map basemap={basemap} activeLayers={activeLayers} />
 
-      {/* Layer control panel */}
       <div className="absolute top-4 left-4 z-[1000] flex flex-col gap-2">
+
+        <div className="panel-card">
+          <p className="panel-label mb-2">Base Map</p>
+          {(Object.keys(BASEMAPS) as BasemapKey[]).map((key) => (
+            <button
+              key={key}
+              onClick={() => setBasemap(key)}
+              className={`layer-btn ${basemap === key ? "layer-btn--active" : ""}`}
+            >
+              <span
+                className="layer-dot"
+                style={{
+                  background: basemap === key ? "var(--sand)" : "transparent",
+                  borderColor: "var(--sand)",
+                }}
+              />
+              {BASEMAPS[key].label}
+            </button>
+          ))}
+        </div>
+
         <div className="panel-card">
           <p className="panel-label mb-2">Data Layers</p>
-          {(Object.keys(LAYER_META) as LayerKey[]).map((key) => {
-            const { label, color } = LAYER_META[key];
+          {(Object.keys(LAYERS) as LayerKey[]).map((key) => {
             const active = activeLayers.includes(key);
+            const color = LAYERS[key].color;
             return (
               <button
                 key={key}
-                onClick={() => toggle(key)}
+                onClick={() => toggleLayer(key)}
                 className={`layer-btn ${active ? "layer-btn--active" : ""}`}
               >
                 <span
                   className="layer-dot"
-                  style={{ background: active ? color : "transparent", borderColor: color }}
+                  style={{
+                    background: active ? color : "transparent",
+                    borderColor: color,
+                  }}
                 />
-                <span>{label}</span>
+                {LAYERS[key].label}
               </button>
             );
           })}
         </div>
+
       </div>
     </div>
   );

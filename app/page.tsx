@@ -9,7 +9,7 @@ export default function Home() {
           <span className="text-[#c9b78a] font-serif text-xl tracking-widest uppercase">
             ABOW
           </span>
-          <span className="text-[#444] text-xs tracking-[0.2em] uppercase mt-0.5">
+          <span className="text-[#999] text-xs tracking-[0.2em] uppercase mt-0.5">
             Ancient Boats · Overwhelmed Waters
           </span>
         </div>

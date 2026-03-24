@@ -31,10 +31,11 @@ body {
 .leaflet-control-attribution {
   background: rgba(13,13,13,0.8) !important;
   color: var(--muted) !important;
-  font-size: 9px !important;
+  font-size: 15px !important;
 }
 
 /* ── Panel card ──────────────────────────────────────────── */
+
 .panel-card {
   background: rgba(20, 20, 20, 0.92);
   border: 1px solid var(--border);
@@ -45,7 +46,7 @@ body {
 }
 
 .panel-label {
-  font-size: 9px;
+  font-size: 15px !important;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sand);
@@ -53,14 +54,18 @@ body {
 }
 
 /* ── Layer toggle buttons ────────────────────────────────── */
+button {
+  font-size: inherit;
+}
+
 .layer-btn {
   display: flex;
   align-items: center;
   gap: 8px;
   width: 100%;
   padding: 6px 0;
-  font-size: 11px;
-  color: var(--muted);
+  font-size: 15px !important;
+  color: #d4cfc7;
   letter-spacing: 0.05em;
   transition: color 0.15s;
   cursor: pointer;
@@ -69,8 +74,8 @@ body {
   text-align: left;
 }
 
-.layer-btn:hover { color: #d4cfc7; }
-.layer-btn--active { color: #d4cfc7; }
+.layer-btn:hover { color:  #4fc3f7; }
+.layer-btn--active { color: #4fc3f7; }
 
 .layer-dot {
   width: 10px;
