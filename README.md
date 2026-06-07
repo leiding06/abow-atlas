@@ -80,7 +80,7 @@ By submitting data, you agree that:
 
 If your data comes from an existing dataset or publication, please include the original source in the submission form.
 
----
+## The software source code of ABOW Atlas is licensed separately under the MIT License.
 
 ## Background
 
